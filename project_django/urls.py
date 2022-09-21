@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from wishlist.views import show_xml, show_json, show_json_by_id, show_xml_by_id
 
 urlpatterns = [
     path('admin/', admin.site.urls),
