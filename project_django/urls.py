@@ -21,9 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
     path('wishlist/', include('wishlist.urls')),
-    path('xml/', show_xml),
-    path('json/', show_json),
-    path('json/<int:id>', show_json_by_id),
-    path('xml/<int:id>', show_xml_by_id),
     
 ]
