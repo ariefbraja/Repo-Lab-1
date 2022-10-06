@@ -10,23 +10,21 @@
   </div>
 </nav>
 
-<div class="w-100 d-flex justify-content-center">
-    <table class="table table-striped  w-auto" style="border:1px solid black;margin-left:auto;margin-right:auto;">
-        <tr style='background-color:#00FFFF'>
-        <th style="text-align:center">Nama Barang</th>
-        <th style="text-align:center">Harga Barang</th>
-        <th style="text-align:center">Deskripsi</th>
-        </tr>
-        {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-        {% for barang in list_barang %}
-        <tr>
-            <th style="font-family: Comic Sans MS">{{barang.nama_barang}}</th>
-            <th style="font-family: Comic Sans MS">{{barang.harga_barang}}</th>
-            <th style="font-family: Comic Sans MS">{{barang.deskripsi}}</th>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
+<table class="table table-striped  w-auto" style="border:1px solid black;margin-left:auto;margin-right:auto;">
+    <tr style='background-color:#00FFFF'>
+    <th style="text-align:center">Nama Barang</th>
+    <th style="text-align:center">Harga Barang</th>
+    <th style="text-align:center">Deskripsi</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for barang in list_barang %}
+    <tr>
+        <th style="font-family: Comic Sans MS">{{barang.nama_barang}}</th>
+        <th style="font-family: Comic Sans MS">{{barang.harga_barang}}</th>
+        <th style="font-family: Comic Sans MS">{{barang.deskripsi}}</th>
+    </tr>
+    {% endfor %}
+</table>
 <a href="{% url 'wishlist:create_wishlist' %}" class="btn btn-success">Add Wishlist</a>
 
 </script>
