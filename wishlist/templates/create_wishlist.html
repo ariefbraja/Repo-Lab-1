@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block meta %}
+<title>Add Wishlist</title>
+
+{% endblock meta %} {% block content %}
+
+<div>
+  <div>
+    <h1>Add Wishlist</h1>
+
+    <form method="POST" action="" class="d-flex flex-column">
+      {% csrf_token %}
+      <div>
+        <label for="nama_barang">Nama Barang</label>
+        <input
+          type="text"
+          name="nama_barang"
+          id="nama_barang"
+          placeholder="Nama Barang"
+          class="form-control"
+        />
+      </div>
+      <div>
+        <label for="harga_barang">Harga Barang</label>
+        <input
+          name="harga_barang"
+          id="harga_barang"
+          placeholder="Harga Barang"
+          class="form-control"
+        />
+      </div>
+      <div>
+        <label for="deskripsi">Deskripsi</label>
+        <input
+          name="deskripsi"
+          id="deskripsi"
+          placeholder="Deskripsi"
+          class="form-control"
+        />
+      </div>
+      <button class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}
